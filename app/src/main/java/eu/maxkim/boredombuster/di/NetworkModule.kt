@@ -49,8 +49,13 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideRetrofit(okHttpClient: OkHttpClient, @BaseUrl baseUrl: String): Retrofit {
-        val moshi: Moshi = Moshi.Builder().add(ActivityTypeAdapter()).build()
+    fun provideMoshi(): Moshi {
+        return Moshi.Builder().add(ActivityTypeAdapter()).build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideRetrofit(okHttpClient: OkHttpClient, moshi: Moshi, @BaseUrl baseUrl: String): Retrofit {
         return Retrofit.Builder()
             .client(okHttpClient)
             .addConverterFactory(MoshiConverterFactory.create(moshi))

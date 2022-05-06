@@ -9,6 +9,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -17,6 +18,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import eu.maxkim.boredombuster.R
+import eu.maxkim.boredombuster.Tags
 import eu.maxkim.boredombuster.activity.model.Activity
 import eu.maxkim.boredombuster.activity.ui.accessibilityLabelRes
 import eu.maxkim.boredombuster.activity.ui.priceLabelRes
@@ -136,7 +138,9 @@ fun NewActivityCard(
                 Spacer(modifier = Modifier.height(16.dp))
 
                 TextButton(
-                    modifier = Modifier.align(alignment = Alignment.CenterHorizontally),
+                    modifier = Modifier
+                        .align(alignment = Alignment.CenterHorizontally)
+                        .testTag(Tags.ActivityLink),
                     onClick = {
                         onLinkClick(activity.link)
                     }

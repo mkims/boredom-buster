@@ -6,6 +6,8 @@ import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
+import eu.maxkim.boredombuster.Tags
 import eu.maxkim.boredombuster.model.Destination
 
 @Composable
@@ -21,7 +23,13 @@ fun BottomNavigationBar(
             Destination.Activity,
             Destination.Favorites
         ).forEach { destination ->
+            val testTag = when (destination) {
+                Destination.Activity -> Tags.ActivityTab
+                Destination.Favorites -> Tags.FavoritesTab
+                else -> ""
+            }
             BottomNavigationItem(
+                modifier = Modifier.testTag(testTag),
                 selected = currentDestination.path == destination.path,
                 icon = {
                     destination.icon?.let { image ->

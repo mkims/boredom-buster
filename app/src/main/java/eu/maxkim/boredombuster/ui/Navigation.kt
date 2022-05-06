@@ -6,6 +6,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
+import androidx.navigation.compose.rememberNavController
 import eu.maxkim.boredombuster.activity.ui.favorite.FavoritesScreen
 import eu.maxkim.boredombuster.activity.ui.newactivity.NewActivity
 import eu.maxkim.boredombuster.model.Destination
@@ -13,7 +14,7 @@ import eu.maxkim.boredombuster.model.Destination
 @Composable
 fun Navigation(
     modifier: Modifier = Modifier,
-    navController: NavHostController
+    navController: NavHostController = rememberNavController()
 ) {
     NavHost(
         modifier = modifier,
