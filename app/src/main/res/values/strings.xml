@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">BoredomBuster</string>
+
+    <string name="label_easy">Easy</string>
+    <string name="label_moderate">Moderate</string>
+    <string name="label_hard">Hard</string>
+
+    <string name="label_free">Free</string>
+    <string name="label_cheap">Cheap</string>
+    <string name="label_pricey">Pricey</string>
+    <string name="label_expensive">Expensive</string>
+
+    <string name="message_empty_activity_list">You have no saved activities! Please save some and come back!</string>
+
+    <string name="cd_refresh_activity">Refresh Activity</string>
+    <string name="cd_save_activity">Save Activity</string>
+    <string name="cd_delete_activity">Delete Activity</string>
+</resources>
