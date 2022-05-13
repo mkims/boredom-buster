@@ -1,2 +1,2 @@
 # boredom-buster
-A simple application to illustrate testing approaches in Android
+A sample companion application to my article [Full Guide to Testing Android Applications in 2022](https://maxkim.eu/full-guide-to-testing-android-applications-in-2022). 
